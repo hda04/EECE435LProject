@@ -20,7 +20,8 @@ SOURCES += \
     emailfoundmessage.cpp \
     usernamenotfound.cpp \
     passworddontmatch.cpp \
-    successmessage.cpp
+    successmessage.cpp \
+    passwordnotenough.cpp
 
 
 HEADERS += \
@@ -41,7 +42,8 @@ HEADERS += \
     emailfoundmessage.h \
     usernamenotfound.h \
     passworddontmatch.h \
-    successmessage.h
+    successmessage.h \
+    passwordnotenough.h
 
 RESOURCES += \
     images.qrc \

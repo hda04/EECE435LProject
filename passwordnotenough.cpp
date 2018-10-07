@@ -1,12 +1,12 @@
-#include "passworddontmatch.h"
+#include "passwordnotenough.h"
 #include<QtWidgets>
 
-passwordDontMatch :: passwordDontMatch()
+passwordNotEnough:: passwordNotEnough()
 {
-    message= QString("password Don't Match");
+    message= QString("Password should contain at least 8 characters");
     QLabel *label= new QLabel(message);
     QVBoxLayout *minorlayout= new QVBoxLayout();
     minorlayout->addWidget(label);
     setLayout(minorlayout);
-
+    show();
 }

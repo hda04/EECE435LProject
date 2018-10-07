@@ -20,6 +20,7 @@ signInWidget::signInWidget(QWidget *parent) : QWidget(parent)
 
 }
 
+
 void signInWidget::setGridLayout()
 {
 
@@ -49,8 +50,13 @@ void signInWidget :: check()
             if(line.contains(usernameEdit->text()+";"+passwordEdit->text())){
                 temp=true;
                 login->setEnabled(true);
-
-            }
+            }else
+                if(line.contains(usernameEdit->text() )&& !line.contains(";"+passwordEdit->text())){
+                    passwordDontMatch *message= new passwordDontMatch();
+                    message->show();
+                    login->setEnabled(false);
+                    break;
+                }
 
         }
         file.close();

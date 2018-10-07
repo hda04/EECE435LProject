@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/backButton.png</file>
+        <file>images/GameRoom.jpg</file>
+        <file>images/DP.jpg</file>
+        <file>images/settings.png</file>
+        <file>images/background.jpg</file>
+        <file>images/logo.jpg</file>
+        <file>images/joystick</file>
+        <file>images/game1logo.png</file>
+        <file>images/game3logo.png</file>
+    </qresource>
+</RCC>
