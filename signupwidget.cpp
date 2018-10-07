@@ -3,6 +3,7 @@
 #include <emailfoundmessage.h>
 #include<passworddontmatch.h>
 #include <successmessage.h>
+#include<passwordnotenough.h>
 
 signUpWidget::signUpWidget(QWidget *parent) : QWidget(parent)
 {
@@ -73,13 +74,19 @@ void signUpWidget::checkPass()
             && !(fnameEdit->text().isEmpty()) && !(lnameEdit->text().isEmpty())
             && !(usernameEdit->text().isEmpty()) && !(emailEdit->text().isEmpty())
             && (maleGenderRadioButton->isChecked() || femaleGenderRadioButton->isChecked())
-            && checkValidUsername())
+            && checkValidUsername()
+            && passwordEdit->text().length()>=8)
     {
         submit->setEnabled(true);
     }
     if(passwordEdit->text() != cpasswordEdit->text())
     {
         passwordDontMatch *message= new passwordDontMatch();
+        message->show();
+    }
+    if(passwordEdit->text().length()<8)
+    {
+        passwordNotEnough *message= new passwordNotEnough();
         message->show();
     }
 

@@ -1,5 +1,1 @@
-<RCC>
-    <qresource prefix="/">
-        <file>../build-GameRoom-Desktop_Qt_5_9_1_GCC_64bit-Debug/data.txt</file>
-    </qresource>
-</RCC>
+<RCC/>
